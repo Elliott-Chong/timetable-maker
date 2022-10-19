@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timetable Maker</title>
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div id="main-container">
+      <div class="sub-container">
+        <h1 class="class">DIT/FT/1A/02</h1>
+        <div class="timetable-wrapper">
+          <div class="square"></div>
+          <div class="square">8 - 9</div>
+          <div class="square">9 - 10</div>
+          <div class="square">10 - 11</div>
+          <div class="square">11 - 12</div>
+          <div class="square">12 - 1</div>
+          <div class="square">1 - 2</div>
+          <div class="square">2 - 3</div>
+          <div class="square">3 - 4</div>
+          <div class="square">4 - 5</div>
+          <div class="square">5 - 6</div>
+          <!-- Mon -->
+          <div class="square">Mon</div>
+          <div class="square span-10 empty"></div>
+          <!-- Tue -->
+          <div class="square">Tue</div>
+          <div
+            class="square span-3 full"
+            draggable="true"
+            data-location="T2255"
+          >
+            MAD ( P )
+          </div>
+          <div class="square span-2 empty"></div>
+          <div class="square span-2 full" data-location="T2255">JPRG ( T )</div>
+          <div class="square span-3 empty"></div>
+          <!-- Wed -->
+          <div class="square">Wed</div>
+          <div class="square span-3 full" data-location="T2265">BED ( T )</div>
+          <div class="square span-2 full" data-location="T2252">DEUI ( T )</div>
+          <div class="square span-5 empty"></div>
+          <!-- Thu -->
+          <div class="square">Thu</div>
+          <div class="square span-2 full" data-location="T2255">MAD ( T )</div>
+          <div class="square span-3 full" data-location="T2255">DEUI ( P )</div>
+          <div class="square span-2 empty"></div>
+          <div class="square span-2 full" data-location="T2255">JPRG ( P )</div>
+          <div class="square span-1 empty"></div>
+          <!-- Fri -->
+          <div class="square">Fri</div>
+          <div class="square span-2 empty"></div>
+          <div class="square span-2 full" data-location="T2252">NAT ( T )</div>
+          <div class="square span-2 empty"></div>
+          <div class="square span-3 full" data-location="T2255">BED ( P )</div>
+          <div class="square span-1 empty"></div>
+        </div>
+        <div class="credit">
+          Source code:
+          <a
+            target="_blank"
+            href="https://github.com/elliott-chong/timetable-maker"
+            >Elliott Chong</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
