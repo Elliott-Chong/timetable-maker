@@ -92,3 +92,15 @@ a {
     transform: translateX(-50%) translateY(-50%);
 }
 
+@media (max-width: 1000px) {
+    :root{
+        --bg-color: #191923;
+        --gray: #9ea3bb;
+        --washed-gray:#5c6179;
+        --thickness: 4px;
+        --square-height: 5vw;
+    }
+    * {
+        font-size: 10px !important;
+    }
+}
