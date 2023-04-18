@@ -27,7 +27,7 @@ body {
 .timetable-wrapper {
     display: grid;
     gap: 8px;
-    grid-template-columns: repeat(11, var(--square-height));
+    grid-template-columns: repeat(22, calc(var(--square-height)/2));
     grid-template-rows: repeat(6, var(--square-height));
 }
 
@@ -51,8 +51,8 @@ a {
     background: none;
     border-radius: 5px;
     cursor: pointer;
-    padding: 4px 8px;
-    transition: transform 200ms ease-in-out;
+    padding: 4px 10px;
+    transition: transform 100ms ease-in-out;
 }
 
 .btn:hover {
@@ -68,9 +68,37 @@ a {
     font-size: 90%;
 }
 
-.credit, .credit> * {
-    font-weight: bold;
-    color:var(--washed-gray);
+#add-modal {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(25, 25, 35, 0.5);
+    place-items: center;
+}
+
+.modal-container {
+    background-color: var(--bg-color);
+    border: 4px solid white;
+    padding: 2rem;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+} 
+
+#add-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input {
+    border-radius: 2px;
+    padding: .3rem .6rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    outline: none;
+    border: none;
 }
 
 .square {
@@ -79,6 +107,7 @@ a {
     border-radius: 7px;
     display: grid;
     place-items: center;
+    grid-column: span 2;
     font-weight: bold;
     user-select: none;
 }

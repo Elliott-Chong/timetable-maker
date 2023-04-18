@@ -7,12 +7,13 @@
     <title>Timetable Maker</title>
     <link rel="stylesheet" href="./css/font.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./script.js" defer></script>
+    <script src="./js/script.js" type="module" defer></script>
+    <!-- <script src="./js/timetable.js" defer></script> -->
   </head>
   <body>
     <div id="main-container">
       <div class="sub-container">
-        <h1 class="class">DIT/FT/1A/02</h1>
+        <h1 class="class">DIT/FT/2B/21</h1>
         <div class="timetable-wrapper">
           <div class="square"></div>
           <div class="square">8 - 9</div>
@@ -26,11 +27,11 @@
           <div class="square">4 - 5</div>
           <div class="square">5 - 6</div>
           <!-- Mon -->
-          <div class="square">Mon</div>
-          <div class="square span-10 empty"></div>
+          <div id="mon" class="square">Mon</div>
+          <!-- <div class="square span-10 empty"></div> -->
           <!-- Tue -->
-          <div class="square">Tue</div>
-          <div
+          <div id="tue" class="square">Tue</div>
+          <!-- <div
             class="square span-3 full"
             draggable="true"
             data-location="T2255"
@@ -39,28 +40,28 @@
           </div>
           <div class="square span-2 empty"></div>
           <div class="square span-2 full" data-location="T2255">JPRG ( T )</div>
-          <div class="square span-3 empty"></div>
+          <div class="square span-3 empty"></div> -->
           <!-- Wed -->
-          <div class="square">Wed</div>
-          <div class="square span-3 full" data-location="T2265">BED ( T )</div>
+          <div id="wed" class="square">Wed</div>
+          <!-- <div class="square span-3 full" data-location="T2265">BED ( T )</div>
           <div class="square span-2 full" data-location="T2252">DEUI ( T )</div>
-          <div class="square span-5 empty"></div>
+          <div class="square span-5 empty"></div> -->
           <!-- Thu -->
-          <div class="square">Thu</div>
-          <div class="square span-2 full" data-location="T2255">MAD ( T )</div>
+          <div id="thu" class="square">Thu</div>
+          <!-- <div class="square span-2 full" data-location="T2255">MAD ( T )</div>
           <div class="square span-3 full" data-location="T2255">DEUI ( P )</div>
           <div class="square span-2 empty"></div>
           <div class="square span-2 full" data-location="T2255">JPRG ( P )</div>
-          <div class="square span-1 empty"></div>
+          <div class="square span-1 empty"></div> -->
           <!-- Fri -->
-          <div class="square">Fri</div>
-          <div class="square span-2 empty"></div>
+          <div id="fri" class="square">Fri</div>
+          <!-- <div class="square span-2 empty"></div>
           <div class="square span-2 full" data-location="T2252">NAT ( T )</div>
           <div class="square span-2 empty"></div>
           <div class="square span-3 full" data-location="T2255">BED ( P )</div>
-          <div class="square span-1 empty"></div>
+          <div class="square span-1 empty"></div> -->
         </div>
-        <div class="btn-container">
+        <!-- <div class="btn-container">
           <button class="btn">Config</button>
           <button class="btn">Donate</button>
           <a
@@ -69,8 +70,51 @@
             class="btn"
             >Source code</a
           >
-          <button class="btn">Save</button>
-        </div>
+          <button id="save-btn" style="margin-left: auto" class="btn">
+            Save
+          </button>
+          <button id="add-btn" class="btn">Add</button>
+        </div> -->
+      </div>
+    </div>
+
+    <div id="add-modal">
+      <div class="modal-container">
+        <h3>Add a schedule</h3>
+        <form id="add-form">
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            class="input"
+            id="name"
+            autocomplete="false"
+          />
+          <input
+            type="time"
+            min="08:00"
+            max="18:00"
+            placeholder="Start time"
+            name="start-time"
+            class="input"
+            id="start-time"
+            autocomplete="false"
+          />
+          <input
+            type="number"
+            placeholder="Duration ( min )"
+            name="duration"
+            class="input"
+            id="duration"
+            autocomplete="false"
+            step="30"
+            min="0"
+            max="600"
+          />
+          <button type="submit" style="align-self: flex-start" class="btn">
+            Add
+          </button>
+        </form>
       </div>
     </div>
   </body>
